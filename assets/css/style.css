@@ -1,0 +1,166 @@
+/* css selectors
+
+tag    - tag name
+class   -.class_name
+id  -#id
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#flex-div {
+  height: 300px;
+  border: 1px dotted red;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+#body {
+  background-color: #a0a0a0;
+}
+
+#navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 12px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+#navbar ul a {
+  text-decoration: none;
+  font-size: 19px;
+  color: #a0a0a0;
+  padding: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+#navbar ul a:hover {
+  color: #000000;
+  background-color: aqua;
+}
+
+#m-btn {
+  display: none;
+  width: 25px;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+}
+
+#m-btn:hover {
+  box-shadow: 0 0 2px 2px #c0c0c0;
+}
+
+#m-btn span {
+  border: 1px solid #777777;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #efefef;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.box-heading {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.box-link {
+  background-color: #707070;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #efefef;
+  border-radius: 2px;
+  transition: all 0.25s linear;
+}
+
+.box-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* helper classes */
+.bg {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.col-stretch {
+  align-items: stretch;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-col-2 {
+  column-gap: 2%;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-10cent {
+  padding: 10%;
+}
+
+/* media query */
+@media only screen and (max-width: 550px) {
+  #navbar ul {
+    display: none;
+  }
+
+  #m-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg {
+    height: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
