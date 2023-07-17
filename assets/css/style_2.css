@@ -1,0 +1,24 @@
+#fixed,
+#relative,
+#absolute {
+  height: 100px;
+  width: 100px;
+}
+
+#fixed {
+  background-color: #000000;
+  color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+}
+#relative {
+  background-color: #ff0000;
+  position: relative;
+}
+#absolute {
+  background-color: #00ff00;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
