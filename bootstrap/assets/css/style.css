@@ -1,0 +1,9 @@
+.bi {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+  color: #f0f0f0;
+}
+
+.bi:hover {
+  color: rgb(255, 196, 0);
+}
