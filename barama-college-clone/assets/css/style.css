@@ -1,0 +1,41 @@
+#main_carousal .carousel-inner {
+  height: 75vh;
+}
+#main_carousal .carousel-inner .carousel-item {
+  height: 100%;
+}
+#main_carousal .carousel-inner .carousel-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50% !important;
+}
+
+#notice-board {
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  height: 65vh;
+  width: 25vw;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.col-odd {
+  background-image: url("../img/photo_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.col-even {
+  background-image: url("../img/photo_1.jpg");
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=style.css.map */
