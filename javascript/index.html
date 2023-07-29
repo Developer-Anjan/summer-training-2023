@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Tutorial</title>
+  </head>
+  <body>
+    <h1>Javascript Tutorial</h1>
+
+    <script>
+      var a = 20;
+      let b = 30;
+
+      console.log(a);
+
+      document.write(b);
+
+      let array = [1, 2, 3, 4, 5];
+
+      console.log(array);
+
+      //Normal Function
+      function addNumbers(x, y) {
+        console.log(x + y);
+      }
+
+      addNumbers("1", 2);
+
+      function addOrConcat(x, y) {
+        if (isNaN(x) || isNaN(y)) {
+          console.log(x.concat(y));
+        } else {
+          console.log(x + y);
+        }
+      }
+
+      addOrConcat(1, 2);
+      addOrConcat(1, "2");
+
+      //Arrow Function
+      const checkNumber = (num) => {
+        console.log(!isNaN(num));
+      };
+
+      checkNumber(5);
+
+      const checkEven = (num) => {
+        if (num % 2 == 0) {
+          return true;
+        }
+      };
+
+      console.log(checkEven(346));
+      console.log(checkEven(345));
+
+      const displayName = (y, x) => {
+        console.log(x + " " + y);
+      };
+
+      displayName("John", "Cena");
+
+      //Object
+
+      let leaders = [
+        {
+          name: "Joe Biden",
+          designation: "President",
+          country: "US",
+        },
+        {
+          name: "Narendra Modi",
+          designation: "Prime Minister",
+          country: "IN",
+        },
+        {
+          name: "Vladimir Putin",
+          designation: "President",
+          country: "RSA",
+        },
+      ];
+
+      let leaders_president = leaders.filter(
+        (el) => el.designation == "President"
+      );
+
+      console.log(leaders_president);
+
+      let leaders_name = leaders.map((el) => el.name);
+      console.log(leaders_name);
+
+      document.write(leaders_name);
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
