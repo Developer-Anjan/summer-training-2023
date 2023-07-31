@@ -13,7 +13,7 @@ app.post("/basic-info", (req, res) => {
   console.log(req.body);
   res.send({
     status: 200,
-    message: "Data recieved successfully",
+    message: "Data recieved successfully.",
   });
 });
 
