@@ -1,0 +1,34 @@
+<%- include("./partials/header") %>
+<div class="container py-5">
+  <h1 class="text-center">Log In</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form action="/user/login" method="post">
+        <div class="mb-3">
+          <label for="email" class="form-label">email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="enter your email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="enter password"
+          />
+        </div>
+        <div class="mb-3 text-center">
+          <input type="submit" class="btn btn-info" value="login" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include("./partials/footer.ejs") %>

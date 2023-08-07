@@ -1,5 +1,7 @@
 const uuid = require("uuid");
 const md5 = require("md5");
+const jwt = require("jsonwebtoken");
+
 const user = require("../db/users");
 
 module.exports = {
@@ -36,6 +38,8 @@ module.exports = {
   },
 
   loginUser: async (req, res) => {
+    const secret = process.env.SECRET_KEY;
+
     try {
       console.log(req.body);
       const data = req.body;
@@ -50,9 +54,12 @@ module.exports = {
         });
       }
 
+      var bearar_token = jwt.sign(data, secret);
+
       res.send({
         status: 200,
         message: "Login Successfully",
+        token: `Bearar ${bearar_token}`,
       });
     } catch (error) {
       console.log(error);

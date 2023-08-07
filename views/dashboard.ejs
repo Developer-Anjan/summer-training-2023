@@ -1,0 +1,16 @@
+<%- include("./partials/header.ejs") %>
+<div
+  class="container-fluid px-5 py-3 d-flex justify-content-between shadow-sm align-items-center"
+>
+  <div class="">
+    <h4>Welcome, <%= email %></h4>
+  </div>
+  <div>
+    <a href="" class="text-decoration-none text-dark"
+      ><span class="bg-primary text-white rounded-circle p-2 me-2"
+        ><%= email.slice(0,2).toUpperCase() %></span
+      >Logout</a
+    >
+  </div>
+</div>
+<%- include("./partials/footer.ejs") %>
