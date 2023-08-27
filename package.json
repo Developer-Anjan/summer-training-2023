@@ -1,0 +1,33 @@
+{
+  "name": "full_stack_node_js",
+  "version": "1.0.0",
+  "description": "Online voting system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "voting",
+    "smart",
+    "online"
+  ],
+  "author": "Anjan Choudhury",
+  "license": "ISC",
+  "dependencies": {
+    "@kanaqsasak/req-flash": "^0.0.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "md5": "^2.3.0",
+    "multer": "^1.4.5-lts.1",
+    "mysqli": "^3.1.4",
+    "nanoid": "^4.0.2",
+    "nodemon": "^3.0.1",
+    "uuid": "^9.0.0"
+  }
+}

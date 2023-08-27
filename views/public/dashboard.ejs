@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting</title>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <style>
+      .profile-photo-sm {
+        height: 75px;
+        width: 75px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center">Cast Your Valuable Votes</h3>
+          <hr class="w-50 mb-5 mx-auto" />
+
+          <% if(message.success && message.success.length>0){ %>
+          <div class="alert alert-success" role="alert">
+            <%= message.success%>
+          </div>
+          <% }else{ if(message.error && message.error.length>0){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= message.error%>
+          </div>
+          <% }else{ %>
+          <div></div>
+          <% }} %>
+
+          <form action="/cast-vote" method="post">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td class="text-center">Post</td>
+                  <td class="text-center">Candidate 1</td>
+                  <td class="text-center">Candidate 2</td>
+                </tr>
+              </thead>
+              <tbody>
+                <% candidates.forEach(post=>{%>
+                <tr>
+                  <td class="text-center"><h4><%= post.postName%></h4></td>
+                  <%post.candidates.forEach(candidate=>{%>
+                  <td class="text-center">
+                    <img
+                      src="<%= candidate.photo %>"
+                      alt=""
+                      class="profile-photo-sm"
+                    />
+                    <h5><%= candidate.name%></h5>
+                    <input type="radio" name="<%=
+                    post.postName.toLowerCase().replaceAll(" ","_")%>"
+                    value="<%=candidate.candidateId%>" id="" />
+                  </td>
+                  <%})%>
+                </tr>
+
+                <%})%>
+              </tbody>
+            </table>
+            <input
+              type="text"
+              name="voter_id"
+              placeholder="Enter your roll no"
+              class="form-control my-2"
+            />
+            <button type="submit" class="btn btn-success">Cast Vote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
